@@ -68,6 +68,13 @@ canvas,.container {
     }
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
 html {
     font-family: Inter Var,sans-serif;
     font-size: 17px;
@@ -81,7 +88,7 @@ html {
     <div class="container">
         <div class="content">
             <div class="content-info">
-                <h1 style="color: #000;" class="title">
+                <h1 id="title" style="color: #000;" class="title">
                     РОМА ЧМО
                 </h1>
             </div>

@@ -25,6 +25,14 @@ SOFTWARE.
 'use strict';
 
 // Mobile promo section
+screen.orientation.onchange = () =>{ location.reload()}
+if (screen.orientation.type !== "landscape-primary") {
+   let title =  document.getElementById("title")
+   title.innerHTML = "Переверни экран чмо"+`<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="none" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M3.7197 5.2203a.75.75 0 0 1 1.0605 0l2.5 2.4993a.75.75 0 1 1-1.0605 1.0608L5 7.561v1.8897c0 .8525.0006 1.4467.0384 1.9094.037.4538.1062.7146.2068.9121.2158.4234.56.7676.9833.9833.1975.1006.4583.1698.9122.2069.4626.0377 1.0568.0383 1.9093.0383h1.2a.75.75 0 0 1 0 1.5H9.0179c-.8129 0-1.4685 0-1.9994-.0433-.5466-.0447-1.0268-.1391-1.471-.3654a3.7499 3.7499 0 0 1-1.6388-1.6388c-.2263-.4442-.3207-.9244-.3653-1.471C3.5 10.9513 3.5 10.2957 3.5 9.4828V7.561L2.2802 8.7804a.75.75 0 1 1-1.0605-1.0608zm9.1396 1.3188c-.4626-.0378-1.0568-.0384-1.9093-.0384h-1.2a.75.75 0 1 1 0-1.5h1.2321c.8128 0 1.4685 0 1.9994.0434.5466.0447 1.0267.139 1.471.3654a3.7504 3.7504 0 0 1 1.6388 1.6388c.2263.4442.3207.9243.3653 1.471.0434.5309.0434 1.1865.0434 1.9994v1.921l1.2196-1.22a.75.75 0 0 1 1.0608 1.0606l-2.5 2.5007a.75.75 0 0 1-1.0608 0l-2.5-2.5007a.75.75 0 0 1 1.0608-1.0606L15 12.4397v-1.889c0-.8524-.0006-1.4466-.0384-1.9093-.0371-.4539-.1062-.7146-.2068-.9122a2.2508 2.2508 0 0 0-.9833-.9832c-.1975-.1007-.4583-.1698-.9122-.2069z" clip-rule="evenodd"/></svg>`
+   title.style.color = "#fff"
+   title.style.animation = "fadeIn 5s"
+   
+}
 
 const canvas = document.getElementsByTagName('canvas')[0];
 resizeCanvas();
@@ -62,6 +70,116 @@ let config = {
 }
 
 const effects =[
+    ()=>{
+        let color = generateColor();
+        color.r = 10;
+        color.g = 10;
+        color.b = 10;
+        splat(0.33, 0.53, -100000, 0, color);
+        color = generateColor();
+        color.r *= 100.0
+        color.g *= 100.0;
+        color.b *= 100.0;
+        splat(0.33, 0.53, 100000, 0, color);
+        color = generateColor();
+        color.r = 10;
+        color.g = 10;
+        color.b = 10;
+        splat(0.6, 0.53, 100000, 0, color);
+        color = generateColor();
+        color.r *= 100.0
+        color.g *= 100.0;
+        color.b *= 100.0;
+        splat(0.6, 0.53, -100000, 0, color);
+    },
+    ()=>{
+        let color = generateColor();
+        color.r = 10;
+        color.g = 10;
+        color.b = 10;
+        splat(0.89, 0.53, -100000, 0, color);
+        color = generateColor();
+        color.r *= 100.0
+        color.g *= 100.0;
+        color.b *= 100.0;
+        splat(0.36, 0.53, 100000, 0, color);
+        color = generateColor();
+        color.r = 10;
+        color.g = 10;
+        color.b = 10;
+        splat(0.6, 0.53, 100000, 0, color);
+        color = generateColor();
+        color.r *= 100.0
+        color.g *= 100.0;
+        color.b *= 100.0;
+        splat(0.6, 0.53, -100000, 0, color);
+    },
+    ()=>{
+        let color = generateColor();
+        color.r = 10;
+        color.g = 10;
+        color.b = 10;
+        splat(0.9, 0.53, -100000, 0, color);
+        color = generateColor();
+        color.r *= 100.0
+        color.g *= 100.0;
+        color.b *= 100.0;
+        splat(0.36, 0.53, 100000, 0, color);
+        color = generateColor();
+        color.r = 10;
+        color.g = 10;
+        color.b = 10;
+        splat(0.6, 0.53, 100000, 0, color);
+        color = generateColor();
+        color.r *= 100.0
+        color.g *= 100.0;
+        color.b *= 100.0;
+        splat(0.6, 0.53, -100000, 0, color);
+    },
+    ()=>{
+        let color = generateColor();
+        color.r = 10;
+        color.g = 10;
+        color.b = 10;
+        splat(0.34, 0.53, -100000, 0, color);
+        color = generateColor();
+        color.r *= 100.0
+        color.g *= 100.0;
+        color.b *= 100.0;
+        splat(0.36, 0.53, 100000, 0, color);
+        color = generateColor();
+        color.r = 10;
+        color.g = 10;
+        color.b = 10;
+        splat(0.6, 0.53, 100000, 0, color);
+        color = generateColor();
+        color.r *= 100.0
+        color.g *= 100.0;
+        color.b *= 100.0;
+        splat(0.6, 0.53, -100000, 0, color);
+    },
+    ()=>{
+        let color = generateColor();
+        color.r = 10;
+        color.g = 10;
+        color.b = 10;
+        splat(0.35, 0.53, -100000, 0, color);
+        color = generateColor();
+        color.r *= 100.0
+        color.g *= 100.0;
+        color.b *= 100.0;
+        splat(0.34, 0.53, 100000, 0, color);
+        color = generateColor();
+        color.r = 10;
+        color.g = 10;
+        color.b = 10;
+        splat(0.6, 0.53, 100000, 0, color);
+        color = generateColor();
+        color.r *= 100.0
+        color.g *= 100.0;
+        color.b *= 100.0;
+        splat(0.6, 0.53, -100000, 0, color);
+    },
     ()=>{
         let color = generateColor();
         color.r *= 10.0;
@@ -1210,6 +1328,7 @@ function updateKeywords () {
 updateKeywords();
 initFramebuffers();
 effects[Math.round(Math.random()*effects.length)-1]()
+// effects[0]()
 
 
 let lastUpdateTime = Date.now();
